@@ -52,7 +52,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	node := choose(nil, sshw.GetConfig())
+	node := choose(nil, sshw.GetNodeConfig())
 	if node == nil {
 		return
 	}
