@@ -150,6 +150,8 @@ func (c *defaultClient) Login() {
 	session.Stderr = os.Stderr
 	session.Stdin = os.Stdin
 
+	session.Setenv("LANG", os.Getenv("LANG"))
+
 	err = session.Shell()
 	if err != nil {
 		l.Error(err)
